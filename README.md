@@ -7,3 +7,6 @@ This is a collection of Comunica package generators.
 Run `npm link` in this directory for installing this generator. (make sure `yo` is globally installed!)
 
 Running `yo comunica:bus` or `yo comunica:bus --name my-name` will create a new bus package.
+
+Running `yo comunica:actor` or `yo comunica:actor --name my-name --bus bus-name` will create a new actor package.
+
