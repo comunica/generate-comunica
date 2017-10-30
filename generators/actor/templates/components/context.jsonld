@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/contexts/components.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "<%= prefix %>": "npmd:@comunica/actor-<%= busName %>-<%= name %>/",
+
+      "Actor<%= componentBusName %><%= componentActorName %>": "<%= prefix %>:Actor/<%= componentBusName %>/<%= componentActorName %>"
+    }
+  ]
+}

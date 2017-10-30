@@ -1,0 +1,9 @@
+{
+  "@context": "https://linkedsoftwaredependencies.org/contexts/comunica-actor-<%= busName %>-<%= name %>.jsonld",
+  "@id": "npmd:@comunica/actor-<%= busName %>-<%= name %>",
+  "@type": "Module",
+  "requireName": "@comunica/actor-<%= busName %>-<%= name %>",
+  "import": [
+    "Actor/<%= componentBusName %>/<%= componentActorName %>.jsonld"
+  ]
+}

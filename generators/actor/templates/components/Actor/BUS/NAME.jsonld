@@ -1,0 +1,21 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/contexts/comunica-actor-<%= busName %>-<%= name %>.jsonld",
+    "https://linkedsoftwaredependencies.org/contexts/comunica-bus-<%= busName %>.jsonld"
+  ],
+  "@id": "npmd:@comunica/actor-<%= busName %>-<%= name %>",
+  "components": [
+    {
+      "@id": "<%= prefix %>:Actor/<%= componentBusName %>/<%= componentActorName %>",
+      "@type": "Class",
+      "extends": "<%= prefixBus %>:Actor/<%= componentBusName %>",
+      "requireElement": "Actor<%= componentBusName %><%= componentActorName %>",
+      "comment": "<%= description %>",
+      "constructorArguments": [
+        {
+          "extends": "<%= prefixBus %>:Actor/<%= componentBusName %>/constructorArgumentsObject"
+        }
+      ]
+    }
+  ]
+}
