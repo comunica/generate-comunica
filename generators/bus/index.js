@@ -71,6 +71,7 @@ module.exports = class extends Generator {
       'components/components.jsonld',
       'components/context.jsonld',
       { src: 'lib/ActorNAME.ts', dest: 'lib/Actor' + this.props.componentBaseName + '.ts' },
+      '.npmignore',
       'index.ts',
       'package.json',
       'README.md',
