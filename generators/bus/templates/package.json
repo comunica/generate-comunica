@@ -1,0 +1,45 @@
+{
+  "name": "@comunica/bus-<%= name %>",
+  "version": "0.0.1",
+  "description": "<%= description %>",
+  "lsd:module": "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-<%= name %>",
+  "lsd:components": "components/components.jsonld",
+  "lsd:contexts": {
+    "https://linkedsoftwaredependencies.org/contexts/comunica-bus-<%= name %>.jsonld": "components/context.jsonld"
+  },
+  "main": "index.js",
+  "typings": "index",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comunica/bus-<%= name %>.git"
+  },
+  "keywords": [
+    "comunica",
+    "bus",
+    "<%= name %>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/comunica/bus-<%= name %>/issues"
+  },
+  "homepage": "https://github.com/comunica/bus-<%= name %>#readme",
+  "files": [
+    "components",
+    "lib/**/*.d.ts",
+    "lib/**/*.js",
+    "index.d.ts",
+    "index.js"
+  ],
+  "peerDependencies": {
+    "@comunica/core": "^0.0.1"
+  },
+  "devDependencies": {
+    "@comunica/core": "^0.0.1"
+  },
+  "scripts": {
+    "lint": "../../node_modules/.bin/tslint lib/**/*.ts test/**/*.ts --exclude '**/*.d.ts'",
+    "build": "../../node_modules/.bin/tsc",
+    "validate": "npm ls",
+    "prepare": "npm run build"
+  }
+}

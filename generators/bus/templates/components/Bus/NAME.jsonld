@@ -1,0 +1,6 @@
+{
+  "@context": "https://linkedsoftwaredependencies.org/contexts/comunica-bus-<%= name %>.jsonld",
+  "@id": "<%= prefix %>:Bus/<%= componentBaseName %>",
+  "@type": "cc:Bus",
+  "comment": "<%= description %>"
+}

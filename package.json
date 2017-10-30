@@ -1,0 +1,23 @@
+{
+  "name": "generator-comunica",
+  "version": "1.0.0",
+  "description": "Generators for Comunica modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "generators/bus"
+  ],
+  "keywords": [
+    "generator",
+    "yo",
+    "comunica",
+    "yeoman-generator"
+  ],
+  "author": "Ruben Taelman <ruben.taelman@ugent.be>",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^2.0.1"
+  }
+}

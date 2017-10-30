@@ -1,0 +1,32 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/contexts/comunica-bus-<%= name %>.jsonld",
+    "https://linkedsoftwaredependencies.org/contexts/comunica-core.jsonld"
+  ],
+  "@id": "npmd:@comunica/bus-<%= name %>",
+  "components": [
+    {
+      "@id": "<%= prefix %>:Actor/<%= componentBaseName %>",
+      "@type": "AbstractClass",
+      "extends": "Actor",
+      "requireElement": "Actor<%= componentBaseName %>",
+      "comment": "<%= descriptionActor %>",
+      "parameters": [
+        {
+          "@id": "cc:Actor/bus",
+          "defaultScoped": {
+            "defaultScope": "<%= prefix %>:Actor/<%= componentBaseName %>",
+            "defaultScopedValue": { "@id": "<%= prefix %>:Bus/<%= componentBaseName %>" }
+          }
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "<%= prefix %>:Actor/<%= componentBaseName %>/constructorArgumentsObject",
+          "@type": "https://linkedsoftwaredependencies.org/vocabularies/object-oriented#Object",
+          "extends": "cc:Actor/constructorArgumentsObject"
+        }
+      ]
+    }
+  ]
+}
