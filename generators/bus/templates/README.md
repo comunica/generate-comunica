@@ -1,3 +1,3 @@
 # Comunica Bus <%= fullName %>
 
-<%= description %> 
+<%= description %>
