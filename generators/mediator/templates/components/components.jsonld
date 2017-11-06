@@ -1,0 +1,9 @@
+{
+  "@context": "https://linkedsoftwaredependencies.org/contexts/comunica-mediator-<%= name %>.jsonld",
+  "@id": "npmd:@comunica/mediator-<%= name %>",
+  "@type": "Module",
+  "requireName": "@comunica/mediator-<%= name %>",
+  "import": [
+    "Mediator/<%= componentMediatorName %>.jsonld"
+  ]
+}

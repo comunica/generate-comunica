@@ -1,0 +1,3 @@
+# Comunica Mediator <%= fullName %>
+
+<%= description %>

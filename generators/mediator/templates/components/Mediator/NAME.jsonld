@@ -1,0 +1,23 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/contexts/comunica-core.jsonld",
+    "https://linkedsoftwaredependencies.org/contexts/comunica-mediator-<%= name %>.jsonld"
+  ],
+  "@id": "npmd:@comunica/mediator-<%= name %>",
+  "components": [
+    {
+      "@id": "<%= prefix %>:Mediator/<%= componentMediatorName %>",
+      "@type": "Class",
+      "extends": "cc:Mediator",
+      "requireElement": "Mediator<%= componentMediatorName %>",
+      "comment": "<%= description %>",
+      "constructorArguments": [
+        {
+          "@id": "<%= prefix %>:Mediator/<%= componentMediatorName %>/constructorArgumentsObject",
+          "@type": "https://linkedsoftwaredependencies.org/vocabularies/object-oriented#Object",
+          "extends": "cc:Mediator/constructorArgumentsObject"
+        }
+      ]
+    }
+  ]
+}
