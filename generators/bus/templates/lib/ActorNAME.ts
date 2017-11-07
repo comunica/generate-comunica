@@ -8,8 +8,8 @@ import {Actor, IAction, IActorArgs, IActorOutput, IActorTest} from "@comunica/co
  * * Test:   <none>
  * * Output: IActor<%= componentBaseName %>Output: TODO: fill in.
  *
- * @see IActionRdfDereference
- * @see IActorRdfDereferenceOutput
+ * @see IAction<%= componentBaseName %>
+ * @see IActor<%= componentBaseName %>Output
  */
 export abstract class Actor<%= componentBaseName %> extends Actor<IAction<%= componentBaseName %>, IActorTest, IActor<%= componentBaseName %>Output> {
 
