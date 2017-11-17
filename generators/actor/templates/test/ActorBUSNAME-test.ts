@@ -22,22 +22,6 @@ describe('Actor<%= componentBusName %><%= componentActorName %>', () => {
     it('should not be able to create new Actor<%= componentBusName %><%= componentActorName %> objects without \'new\'', () => {
       expect(() => { (<any> Actor<%= componentBusName %><%= componentActorName %>)(); }).toThrow();
     });
-
-    it('should throw an error when constructed without a name', () => {
-      expect(() => { new (<any> Actor<%= componentBusName %><%= componentActorName %>)({ bus }); }).toThrow();
-    });
-
-    it('should throw an error when constructed without a bus', () => {
-      expect(() => { new (<any> Actor<%= componentBusName %><%= componentActorName %>)({ name: 'actor' }); }).toThrow();
-    });
-
-    it('should throw an error when constructed without a name and bus', () => {
-      expect(() => { new (<any> Actor<%= componentBusName %><%= componentActorName %>)({}); }).toThrow();
-    });
-
-    it('should throw an error when constructed without arguments', () => {
-      expect(() => { new (<any> Actor<%= componentBusName %><%= componentActorName %>)(); }).toThrow();
-    });
   });
 
   describe('An Actor<%= componentBusName %><%= componentActorName %> instance', () => {

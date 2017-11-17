@@ -23,22 +23,6 @@ describe('Mediator<%= componentMediatorName %>', () => {
     it('should not be able to create new Mediator<%= componentMediatorName %> objects without \'new\'', () => {
       expect(() => { (<any> Mediator<%= componentMediatorName %>)(); }).toThrow();
     });
-
-    it('should throw an error when constructed without a name', () => {
-      expect(() => { new (<any> Mediator<%= componentMediatorName %>)({ bus }); }).toThrow();
-    });
-
-    it('should throw an error when constructed without a bus', () => {
-      expect(() => { new (<any> Mediator<%= componentMediatorName %>)({ name: 'mediator' }); }).toThrow();
-    });
-
-    it('should throw an error when constructed without a name and bus', () => {
-      expect(() => { new (<any> Mediator<%= componentMediatorName %>)({}); }).toThrow();
-    });
-
-    it('should throw an error when constructed without arguments', () => {
-      expect(() => { new (<any> Mediator<%= componentMediatorName %>)(); }).toThrow();
-    });
   });
 
   describe('An Mediator<%= componentMediatorName %> instance', () => {
