@@ -1,0 +1,11 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/contexts/components.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "<%= prefix %>": "npmd:@comunica/actor-query-operation-<%= name %>/",
+
+      "ActorQueryOperation<%= componentActorName %>": "<%= prefix %>:Actor/QueryOperation/<%= componentActorName %>"
+    }
+  ]
+}
