@@ -14,14 +14,14 @@ module.exports = class extends Generator {
       message : 'Actor name (without actor-bus- prefix)',
       default : this.options.name || 'my-name',
       validate: function(input) {
-        return !/^actor-/.test(input) && !/\s/g.test(input) && /^[a-z-]+$/.test(input);
+        return !/^actor-/.test(input) && !/\s/g.test(input) && /^[a-z0-9-]+$/.test(input);
       }
     }, {
       name    : 'busName',
       message : 'Bus name (without bus- prefix)',
       default : this.options.busName || 'my-name',
       validate: function(input) {
-        return !/^bus-/.test(input) && !/\s/g.test(input) && /^[a-z-]+$/.test(input);
+        return !/^bus-/.test(input) && !/\s/g.test(input) && /^[a-z0-9-]+$/.test(input);
       }
     }, {
       name    : 'fullName',

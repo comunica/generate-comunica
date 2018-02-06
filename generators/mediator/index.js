@@ -13,7 +13,7 @@ module.exports = class extends Generator {
       message : 'Mediator name (without mediator- prefix)',
       default : this.options.name || 'my-name',
       validate: function(input) {
-        return !/^mediator-/.test(input) && !/\s/g.test(input) && /^[a-z-]+$/.test(input);
+        return !/^mediator-/.test(input) && !/\s/g.test(input) && /^[a-z0-9-]+$/.test(input);
       }
     }, {
       name    : 'fullName',

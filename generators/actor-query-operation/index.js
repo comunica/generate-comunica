@@ -14,7 +14,7 @@ module.exports = class extends Generator {
       message : 'The SPARQL Algebra type name of the operator (lowercase)',
       default : this.options.operationName,
       validate: function(input) {
-        return !/\s/g.test(input) && /^[a-z-]+$/.test(input);
+        return !/\s/g.test(input) && /^[a-z0-9-]+$/.test(input);
       }
     }, {
       name    : 'operationInterfaceType',
@@ -23,7 +23,7 @@ module.exports = class extends Generator {
         return props.operationName.replace(/(^|-)([a-z])/g, function (g) { return g[g.length - 1].toUpperCase(); });
       },
       validate: function(input) {
-        return /^[a-zA-Z]+$/.test(input);
+        return /^[a-z0-9A-Z]+$/.test(input);
       }
     }, {
       name    : 'name',
@@ -32,7 +32,7 @@ module.exports = class extends Generator {
           return props.operationName;
         },
       validate: function(input) {
-        return !/^actor-/.test(input) && !/\s/g.test(input) && /^[a-z-]+$/.test(input);
+        return !/^actor-/.test(input) && !/\s/g.test(input) && /^[a-z0-9-]+$/.test(input);
       }
     }, {
       name    : 'fullName',
