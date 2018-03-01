@@ -1,5 +1,7 @@
 ## generator-comunica
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/comunica/generate-comunica.svg)](https://greenkeeper.io/)
+
 This is a collection of Comunica package generators.
 
 ### Usage
