@@ -1,6 +1,6 @@
 {
   "name": "@comunica/actor-<%= busName %>-<%= name %>",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A <%= name %> <%= busName %> actor",
   "lsd:module": "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-<%= busName %>-<%= name %>",
   "lsd:components": "components/components.jsonld",

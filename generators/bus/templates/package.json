@@ -1,6 +1,6 @@
 {
   "name": "@comunica/bus-<%= name %>",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "<%= description %>",
   "lsd:module": "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-<%= name %>",
   "lsd:components": "components/components.jsonld",

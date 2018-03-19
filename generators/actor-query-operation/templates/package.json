@@ -1,6 +1,6 @@
 {
   "name": "@comunica/actor-query-operation-<%= name %>",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A <%= name %> query-operation actor",
   "lsd:module": "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-query-operation-<%= name %>",
   "lsd:components": "components/components.jsonld",

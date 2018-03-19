@@ -1,6 +1,6 @@
 {
   "name": "@comunica/mediator-<%= name %>",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A <%= name %> mediator",
   "lsd:module": "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/mediator-<%= name %>",
   "lsd:components": "components/components.jsonld",
