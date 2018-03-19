@@ -10,6 +10,9 @@
   "main": "index.js",
   "typings": "index",
   "repository": "https://github.com/comunica/comunica/tree/master/packages/bus-<%= name %>",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "comunica",
     "bus",

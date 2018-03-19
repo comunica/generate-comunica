@@ -10,6 +10,9 @@
   "main": "index.js",
   "typings": "index",
   "repository": "https://github.com/comunica/comunica/tree/master/packages/actor-query-operation-<%= name %>",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "comunica",
     "actor",
