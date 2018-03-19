@@ -18,8 +18,9 @@ describe('ActorQueryOperation<%= componentActorName %>', () => {
           Bindings({ a: literal('2') }),
           Bindings({ a: literal('3') }),
         ]),
-        metadata: Promise.resolve({ totalItems: 3 }),
+        metadata: () => Promise.resolve({ totalItems: 3 }),
         operated: arg,
+        type: 'bindings',
         variables: ['a'],
       }),
     };
