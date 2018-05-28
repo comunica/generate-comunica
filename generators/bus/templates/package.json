@@ -31,10 +31,10 @@
     "index.js"
   ],
   "peerDependencies": {
-    "@comunica/core": "^0.0.1"
+    "@comunica/core": "^<%= versionComunicaCore %>"
   },
   "devDependencies": {
-    "@comunica/core": "^0.0.1"
+    "@comunica/core": "^<%= versionComunicaCore %>"
   },
   "scripts": {
     "lint": "node \"../../node_modules/tslint/bin/tslint\" lib/**/*.ts test/**/*.ts --exclude '**/*.d.ts'",

@@ -33,10 +33,10 @@
     "lodash": "^4.17.4"
   },
   "peerDependencies": {
-    "@comunica/core": "^0.0.1"
+    "@comunica/core": "^<%= versionComunicaCore %>"
   },
   "devDependencies": {
-    "@comunica/core": "^0.0.1"
+    "@comunica/core": "^<%= versionComunicaCore %>"
   },
   "jest": {
     "transform": {

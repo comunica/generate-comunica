@@ -32,12 +32,12 @@
     "index.js"
   ],
   "peerDependencies": {
-    "@comunica/core": "^0.0.1",
-    "@comunica/bus-<%= busName %>": "^0.0.1"
+    "@comunica/core": "^<%= versionComunicaCore %>",
+    "@comunica/bus-<%= busName %>": "^<%= versionBus %>"
   },
   "devDependencies": {
-    "@comunica/core": "^0.0.1",
-    "@comunica/bus-<%= busName %>": "^0.0.1"
+    "@comunica/core": "^<%= versionComunicaCore %>",
+    "@comunica/bus-<%= busName %>": "^<%= versionBus %>"
   },
   "jest": {
     "transform": {

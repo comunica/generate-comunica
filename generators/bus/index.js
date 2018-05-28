@@ -79,7 +79,12 @@ module.exports = class extends Generator {
       'tslint.json'
     ];
     var self = this;
-    var basePath = this.destinationRoot().endsWith('packages') ? '' : 'packages/';
+    var basePath = this.destinationRoot().endsWith('packages') ? './' : './packages/';
+
+    // Set versions
+    const cwd = process.cwd() + '/';
+    self.props['versionComunicaCore'] = require(cwd + basePath + 'core/package.json').version;
+
     files.forEach(function(file) {
       var s = typeof file == 'string' ? file : file.src,
           d = typeof file == 'string' ? file : file.dest;
