@@ -9,7 +9,7 @@
   },
   "main": "index.js",
   "typings": "index",
-  "repository": "https://github.com/comunica/comunica/tree/master/packages/mediator-<%= busName %>-<%= name %>",
+  "repository": "https://github.com/comunica/comunica/tree/master/packages/mediator-<%= name %>",
   "publishConfig": {
     "access": "public"
   },
