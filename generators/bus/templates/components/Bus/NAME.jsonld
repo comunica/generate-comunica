@@ -1,5 +1,5 @@
 {
-  "@context": "https://linkedsoftwaredependencies.org/contexts/comunica-bus-<%= name %>.jsonld",
+  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-<%= name %>/^1.0.0/components/context.jsonld",
   "@id": "<%= prefix %>:Bus/<%= componentBaseName %>",
   "@type": "cc:Bus",
   "comment": "<%= description %>"

@@ -1,7 +1,7 @@
 {
   "@context": [
-    "https://linkedsoftwaredependencies.org/contexts/comunica-actor-<%= busName %>-<%= name %>.jsonld",
-    "https://linkedsoftwaredependencies.org/contexts/comunica-bus-<%= busName %>.jsonld"
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/actor-<%= busName %>-<%= name %>/^1.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-<%= busName %>/^1.0.0/components/context.jsonld"
   ],
   "@id": "npmd:@comunica/actor-<%= busName %>-<%= name %>",
   "components": [
