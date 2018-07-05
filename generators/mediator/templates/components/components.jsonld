@@ -4,6 +4,6 @@
   "@type": "Module",
   "requireName": "@comunica/mediator-<%= name %>",
   "import": [
-    "Mediator/<%= componentMediatorName %>.jsonld"
+    "files-<%= prefix %>:components/Mediator/<%= componentMediatorName %>.jsonld"
   ]
 }

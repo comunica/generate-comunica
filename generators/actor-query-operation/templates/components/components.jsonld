@@ -4,6 +4,6 @@
   "@type": "Module",
   "requireName": "@comunica/actor-query-operation-<%= name %>",
   "import": [
-    "Actor/QueryOperation/<%= componentActorName %>.jsonld"
+    "files-<%= prefix %>:components/Actor/QueryOperation/<%= componentActorName %>.jsonld"
   ]
 }

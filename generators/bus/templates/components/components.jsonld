@@ -4,7 +4,7 @@
   "@type": "Module",
   "requireName": "@comunica/bus-<%= name %>",
   "import": [
-    "Bus/<%= componentBaseName %>.jsonld",
-    "Actor/<%= componentBaseName %>.jsonld"
+    "files-<%= prefix %>:components/Bus/<%= componentBaseName %>.jsonld",
+    "files-<%= prefix %>:components/Actor/<%= componentBaseName %>.jsonld"
   ]
 }
