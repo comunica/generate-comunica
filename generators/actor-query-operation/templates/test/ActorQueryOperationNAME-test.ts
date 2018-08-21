@@ -1,7 +1,7 @@
 import {ActorQueryOperation, Bindings} from "@comunica/bus-query-operation";
 import {Bus} from "@comunica/core";
 import {ArrayIterator} from "asynciterator";
-import {literal, variable} from "rdf-data-model";
+import {literal, variable} from "@rdfjs/data-model";
 import {ActorQueryOperation<%= componentActorName %>} from "../lib/ActorQueryOperation<%= componentActorName %>";
 const arrayifyStream = require('arrayify-stream');
 
