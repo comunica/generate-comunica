@@ -42,6 +42,11 @@
     "@comunica/core": "^<%= versionComunicaCore %>"
   },
   "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "test/tsconfig.json"
+      }
+    },
     "transform": {
       "^.+\\.ts$": "ts-jest"
     },
