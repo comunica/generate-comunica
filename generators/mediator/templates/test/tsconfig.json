@@ -3,6 +3,9 @@
     "module": "commonjs",
     "lib": [
       "es6"
-    ]
+    ],
+    "compilerOptions": {
+      "noImplicitAny": false
+    }
   }
 }
