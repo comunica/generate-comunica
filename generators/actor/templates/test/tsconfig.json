@@ -4,9 +4,7 @@
     "lib": [
       "es6"
     ],
-    "compilerOptions": {
-      "noImplicitAny": false
-    }
+    "noImplicitAny": false
   }
 }
 
