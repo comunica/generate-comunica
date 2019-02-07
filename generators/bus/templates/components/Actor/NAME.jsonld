@@ -8,7 +8,7 @@
     {
       "@id": "<%= prefix %>:Actor/<%= componentBaseName %>",
       "@type": "AbstractClass",
-      "extends": "Actor",
+      "extends": "cc:Actor",
       "requireElement": "Actor<%= componentBaseName %>",
       "comment": "<%= descriptionActor %>",
       "parameters": [
