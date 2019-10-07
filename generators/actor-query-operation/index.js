@@ -97,6 +97,7 @@ module.exports = class extends Generator {
     var self = this;
     var basePath = this.destinationRoot().endsWith('packages') ? './' : './packages/';
 
+    self.props.busName = 'query-operation';
     populateProps(self.props, basePath);
     files.forEach(function(file) {
       var s = typeof file == 'string' ? file : file.src,
