@@ -66,14 +66,10 @@ module.exports = class extends Generator {
       'components/context.jsonld',
       { src: 'lib/MediatorNAME.ts', dest: 'lib/Mediator' + this.props.componentMediatorName + '.ts' },
       { src: 'test/MediatorNAME-test.ts', dest: 'test/Mediator' + this.props.componentMediatorName + '-test.ts' },
-      'test/tsconfig.json',
-      'test/tslint.json',
       '.npmignore',
       'index.ts',
       'package.json',
       'README.md',
-      'tsconfig.json',
-      'tslint.json'
     ];
     var self = this;
     var basePath = this.destinationRoot().endsWith('packages') ? './' : './packages/';

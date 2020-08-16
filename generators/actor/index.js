@@ -103,14 +103,10 @@ module.exports = class extends Generator {
       'components/context.jsonld',
       { src: 'lib/ActorBUSNAME.ts', dest: 'lib/Actor' + this.props.componentBusName + this.props.componentActorName + '.ts' },
       { src: 'test/ActorBUSNAME-test.ts', dest: 'test/Actor' + this.props.componentBusName + this.props.componentActorName + '-test.ts' },
-      'test/tsconfig.json',
-      'test/tslint.json',
       '.npmignore',
       'index.ts',
       'package.json',
       'README.md',
-      'tsconfig.json',
-      'tslint.json'
     ];
     var self = this;
     var basePath = this.destinationRoot().endsWith('packages') ? './' : './packages/';

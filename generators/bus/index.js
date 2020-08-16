@@ -76,8 +76,6 @@ module.exports = class extends Generator {
       'index.ts',
       'package.json',
       'README.md',
-      'tsconfig.json',
-      'tslint.json'
     ];
     var self = this;
     var basePath = this.destinationRoot().endsWith('packages') ? './' : './packages/';
