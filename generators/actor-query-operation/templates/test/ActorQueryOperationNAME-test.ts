@@ -1,8 +1,8 @@
-import { ActorQueryOperation, Bindings } from '@comunica/bus-query-operation';
+import { Bindings, IActorQueryOperationOutputBindings } from '@comunica/bus-query-operation';
 import { Bus } from '@comunica/core';
 import { literal } from '@rdfjs/data-model';
 import { ArrayIterator } from 'asynciterator';
-import { ActorQueryOperationReducedMy } from '../lib/ActorQueryOperationReducedMy';
+import { ActorQueryOperation<%= componentActorName %> } from '../lib/ActorQueryOperation<%= componentActorName %>';
 const arrayifyStream = require('arrayify-stream');
 
 describe('ActorQueryOperation<%= componentActorName %>', () => {
@@ -14,9 +14,9 @@ describe('ActorQueryOperation<%= componentActorName %>', () => {
     mediatorQueryOperation = {
       mediate: (arg: any) => Promise.resolve({
         bindingsStream: new ArrayIterator([
-          Bindings({ a: literal('1') }),
-          Bindings({ a: literal('2') }),
-          Bindings({ a: literal('3') }),
+          Bindings({ '?a': literal('1') }),
+          Bindings({ '?a': literal('2') }),
+          Bindings({ '?a': literal('3') }),
         ], { autoStart: false }),
         metadata: () => Promise.resolve({ totalItems: 3 }),
         operated: arg,
@@ -46,7 +46,17 @@ describe('ActorQueryOperation<%= componentActorName %>', () => {
 
     it('should run', () => {
       const op = { operation: { type: '<%= operationName %>' }};
-      return expect(actor.run(op)).resolves.toMatchObject({ todo: true }); // TODO
+      return actor.run(op).then(async(output: IActorQueryOperationOutputBindings) => {
+        expect(await output.metadata!()).toEqual({ totalItems: 3 });
+        expect(output.variables).toEqual([ '?a' ]);
+        expect(output.type).toEqual('bindings');
+        expect(output.canContainUndefs).toEqual(false);
+        expect(await arrayifyStream(output.bindingsStream)).toEqual([
+          Bindings({ '?a': literal('1') }),
+          Bindings({ '?a': literal('2') }),
+          Bindings({ '?a': literal('3') }),
+        ]);
+      });
     });
   });
 });
