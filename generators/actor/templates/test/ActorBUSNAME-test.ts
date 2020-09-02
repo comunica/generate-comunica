@@ -1,27 +1,12 @@
-import {Actor<%= componentBusName %>} from "@comunica/bus-<%= busName %>";
-import {Bus} from "@comunica/core";
-import {Actor<%= componentBusName %><%= componentActorName %>} from "../lib/Actor<%= componentBusName %><%= componentActorName %>";
+import { Actor<%= componentBusName %> } from '@comunica/bus-<%= busName %>';
+import { Bus } from '@comunica/core';
+import { Actor<%= componentBusName %><%= componentActorName %> } from '../lib/Actor<%= componentBusName %><%= componentActorName %>';
 
 describe('Actor<%= componentBusName %><%= componentActorName %>', () => {
-  let bus;
+  let bus: any;
 
   beforeEach(() => {
     bus = new Bus({ name: 'bus' });
-  });
-
-  describe('The Actor<%= componentBusName %><%= componentActorName %> module', () => {
-    it('should be a function', () => {
-      expect(Actor<%= componentBusName %><%= componentActorName %>).toBeInstanceOf(Function);
-    });
-
-    it('should be a Actor<%= componentBusName %><%= componentActorName %> constructor', () => {
-      expect(new (<any> Actor<%= componentBusName %><%= componentActorName %>)({ name: 'actor', bus })).toBeInstanceOf(Actor<%= componentBusName %><%= componentActorName %>);
-      expect(new (<any> Actor<%= componentBusName %><%= componentActorName %>)({ name: 'actor', bus })).toBeInstanceOf(Actor<%= componentBusName %>);
-    });
-
-    it('should not be able to create new Actor<%= componentBusName %><%= componentActorName %> objects without \'new\'', () => {
-      expect(() => { (<any> Actor<%= componentBusName %><%= componentActorName %>)(); }).toThrow();
-    });
   });
 
   describe('An Actor<%= componentBusName %><%= componentActorName %> instance', () => {

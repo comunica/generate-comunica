@@ -1,4 +1,4 @@
-import {Actor, IAction, IActorOutput, IActorReply, IActorTest, IMediatorArgs, Mediator} from "@comunica/core";
+import { Actor, IAction, IActorOutput, IActorReply, IActorTest, IMediatorArgs } from '@comunica/core';
 import * as _ from "lodash";
 
 /**
@@ -6,8 +6,7 @@ import * as _ from "lodash";
  */
 export class Mediator<%= componentMediatorName %><A extends Actor<I, T, O>, I extends IAction, T extends IActorTest, O extends IActorOutput>
   extends Mediator<A, I, T, O> {
-
-  constructor(args: IMediatorArgs<A, I, T, O>) {
+  public constructor(args: IMediatorArgs<A, I, T, O>) {
     super(args);
   }
 
@@ -16,5 +15,4 @@ export class Mediator<%= componentMediatorName %><A extends Actor<I, T, O>, I ex
     // TODO
     return null;
   }
-
 }

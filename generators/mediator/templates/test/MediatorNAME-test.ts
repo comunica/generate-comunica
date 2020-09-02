@@ -1,28 +1,11 @@
-import {Actor, Bus, IAction, IActorOutput, IActorTest, Mediator} from "@comunica/core";
-import {Mediator<%= componentMediatorName %>} from "../lib/Mediator<%= componentMediatorName %>";
+import { Actor, Bus, IAction, IActorOutput, IActorTest, Mediator } from '@comunica/core';
+import { Mediator<%= componentMediatorName %> } from '../lib/Mediator<%= componentMediatorName %>';
 
 describe('Mediator<%= componentMediatorName %>', () => {
-  let bus;
+  let bus: any;
 
   beforeEach(() => {
     bus = new Bus({ name: 'bus' });
-  });
-
-  describe('The Mediator<%= componentMediatorName %> module', () => {
-    it('should be a function', () => {
-      expect(Mediator<%= componentMediatorName %>).toBeInstanceOf(Function);
-    });
-
-    it('should be a Mediator<%= componentMediatorName %> constructor', () => {
-      expect(new (<any> Mediator<%= componentMediatorName %>)({ name: 'mediator', bus }))
-        .toBeInstanceOf(Mediator<%= componentMediatorName %>);
-      expect(new (<any> Mediator<%= componentMediatorName %>)({ name: 'mediator', bus }))
-        .toBeInstanceOf(Mediator);
-    });
-
-    it('should not be able to create new Mediator<%= componentMediatorName %> objects without \'new\'', () => {
-      expect(() => { (<any> Mediator<%= componentMediatorName %>)(); }).toThrow();
-    });
   });
 
   describe('An Mediator<%= componentMediatorName %> instance', () => {
@@ -45,10 +28,9 @@ describe('Mediator<%= componentMediatorName %>', () => {
 });
 
 class DummyActor extends Actor<IAction, IDummyTest, IDummyTest> {
-
   public readonly id: number;
 
-  constructor(id: number, bus: Bus<DummyActor, IAction, IDummyTest, IDummyTest>) {
+  public constructor(id: number, bus: Bus<DummyActor, IAction, IDummyTest, IDummyTest>) {
     super({ name: 'dummy' + id, bus });
     this.id = id;
   }
@@ -60,7 +42,6 @@ class DummyActor extends Actor<IAction, IDummyTest, IDummyTest> {
   public async run(action: IAction): Promise<IDummyTest> {
     return { field: this.id };
   }
-
 }
 
 interface IDummyTest extends IActorTest, IActorOutput {

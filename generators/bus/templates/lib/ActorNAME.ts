@@ -1,4 +1,4 @@
-import {Actor, IAction, IActorArgs, IActorOutput, IActorTest} from "@comunica/core";
+import { Actor, IAction, IActorArgs, IActorOutput, IActorTest } from '@comunica/core';
 
 /**
  * <%= descriptionActor %>
@@ -12,11 +12,9 @@ import {Actor, IAction, IActorArgs, IActorOutput, IActorTest} from "@comunica/co
  * @see IActor<%= componentBaseName %>Output
  */
 export abstract class Actor<%= componentBaseName %> extends Actor<IAction<%= componentBaseName %>, IActorTest, IActor<%= componentBaseName %>Output> {
-
-  constructor(args: IActorArgs<IAction<%= componentBaseName %>, IActorTest, IActor<%= componentBaseName %>Output>) {
+  public constructor(args: IActorArgs<IAction<%= componentBaseName %>, IActorTest, IActor<%= componentBaseName %>Output>) {
     super(args);
   }
-
 }
 
 export interface IAction<%= componentBaseName %> extends IAction {

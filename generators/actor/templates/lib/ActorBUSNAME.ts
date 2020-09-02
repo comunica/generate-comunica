@@ -1,12 +1,11 @@
-import {Actor<%= componentBusName %>, IAction<%= componentBusName %>, IActor<%= componentBusName %>Output} from "@comunica/bus-<%= busName %>";
-import {IActorArgs, IActorTest} from "@comunica/core";
+import { Actor<%= componentBusName %>, IAction<%= componentBusName %>, IActor<%= componentBusName %>Output } from '@comunica/bus-<%= busName %>';
+import { IActorArgs, IActorTest } from '@comunica/core';
 
 /**
  * <%= description %>
  */
 export class Actor<%= componentBusName %><%= componentActorName %> extends Actor<%= componentBusName %> {
-
-  constructor(args: IActorArgs<IAction<%= componentBusName %>, IActorTest, IActor<%= componentBusName %>Output>) {
+  public constructor(args: IActorArgs<IAction<%= componentBusName %>, IActorTest, IActor<%= componentBusName %>Output>) {
     super(args);
   }
 
@@ -17,5 +16,4 @@ export class Actor<%= componentBusName %><%= componentActorName %> extends Actor
   public async run(action: IAction<%= componentBusName %>): Promise<IActor<%= componentBusName %>Output> {
     return true; // TODO implement
   }
-
 }
