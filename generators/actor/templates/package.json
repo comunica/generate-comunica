@@ -12,7 +12,11 @@
   },
   "main": "index.js",
   "typings": "index",
-  "repository": "https://github.com/comunica/comunica/tree/master/packages/actor-<%= busName %>-<%= name %>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/comunica/comunica.git",
+    "directory": "packages/actor-<%= busName %>-<%= name %>"
+  },
   "publishConfig": {
     "access": "public"
   },
