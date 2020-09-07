@@ -59,7 +59,7 @@ module.exports = class extends Generator {
       name    : 'description',
       message : 'A description of the actor',
       default : function(props) {
-        return 'A comunica ' + props.fullName + ' Query Operation Actor.';
+        return 'A [Query Operation](https://github.com/comunica/comunica/tree/master/packages/bus-query-operation) actor that handles SPARQL ' + props.name + ' operations.';
       }
     }, {
       name    : 'prefix',

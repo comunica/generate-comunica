@@ -12,6 +12,30 @@ This module is part of the [Comunica framework](https://github.com/comunica/comu
 $ yarn add @comunica/mediator-<%= name %>
 ```
 
-## Usage
+## Configure
 
-TODO
+After installing, this mediator can be instantiated as follows:
+```text
+{
+  "@context": [
+    ...
+    "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/mediator-all/^1.0.0/components/context.jsonld"  
+  ],
+  "actors": [
+    ...
+    {
+      "@type": "SomeActor",
+      "someMediator": {
+        "@id": "config-sets:sparql-init.json#mediatorHttpInvalidate",
+        "@type": "Mediator<%= componentMediatorName %>",
+        "cc:Mediator/bus": { "@id": "cbhi:Bus/HttpInvalidate" }
+      }
+    }
+  ]
+}
+```
+
+### Config Parameters
+
+* `cc:Mediator/bus`: Identifier of the bus to mediate over.
+

@@ -14,4 +14,11 @@ $ yarn add @comunica/bus-<%= name %>
 
 ## Usage
 
-TODO
+## Bus usage
+
+* **Context**: `"https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-<%= name %>/^1.0.0/components/context.jsonld"`
+* **Bus name**: `<%= prefix %>:Bus/<%= componentBaseName %>`
+
+## Creating actors on this bus
+
+Actors extending [`Actor<%= componentBaseName %>`](TODO:jsdoc_url) are automatically subscribed to this bus.
