@@ -79,7 +79,6 @@ module.exports = class extends Generator {
     ];
     var self = this;
     var basePath = this.destinationRoot().endsWith('packages') ? './' : './packages/';
-
     populateProps(self.props, basePath, self.options.namespace);
     files.forEach(function(file) {
       var s = typeof file == 'string' ? file : file.src,
