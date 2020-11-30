@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-function populateProps(props, basePath, namespace) {
+function populateProps(props, basePath) {
   var cwd = process.cwd() + '/';
   var requirePath = cwd + basePath + '../node_modules/@comunica/';
   props['versionComunicaCore'] = require(requirePath + 'core/package.json').version;
