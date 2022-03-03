@@ -27,7 +27,7 @@ After installing, this package can be added to your engine's configuration as fo
   "actors": [
     ...
     {
-      "@id": TODO,
+      "@id": "urn:comunica:default:<%= busName %>/actors#<%= name %>",
       "@type": "Actor<%= componentBusName %><%= componentActorName %>"
     }
   ]
@@ -36,4 +36,6 @@ After installing, this package can be added to your engine's configuration as fo
 
 ### Config Parameters
 
-TODO
+TODO: fill in parameters (this section can be removed if there are none)
+
+* `someParam`: Description of the param

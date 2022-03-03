@@ -20,7 +20,7 @@ $ yarn add @comunica/bus-<%= name %>
 ## Bus usage
 
 * **Context**: `"https://linkedsoftwaredependencies.org/bundles/npm/@comunica/bus-<%= name %>/^1.0.0/components/context.jsonld"`
-* **Bus name**: `<%= prefix %>:Bus/<%= componentBaseName %>`
+* **Bus name**: `Actor<%= componentBaseName %>:_default_bus`
 
 ## Creating actors on this bus
 

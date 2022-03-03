@@ -1,9 +1,0 @@
-{
-  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@comunica/mediator-<%= name %>/^1.0.0/components/context.jsonld",
-  "@id": "npmd:@comunica/mediator-<%= name %>",
-  "@type": "Module",
-  "requireName": "@comunica/mediator-<%= name %>",
-  "import": [
-    "files-<%= prefix %>:components/Mediator/<%= componentMediatorName %>.jsonld"
-  ]
-}

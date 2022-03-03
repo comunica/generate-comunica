@@ -42,15 +42,6 @@ module.exports = class extends Generator {
       default : function(props) {
         return 'A comunica ' + props.name + ' mediator.';
       }
-    }, {
-      name    : 'prefix',
-      message : 'The component context prefix',
-      default : function(props) {
-        return 'cm' + props.name.split('-').map(function (part) { return part[0] }).join('');
-      },
-      validate: function(input) {
-        return !/\s/g.test(input) && !/\./.test(input) && !/-/.test(input) && !/[A-Z]/.test(input) && input.length > 1;
-      }
     }];
     var self = this;
     return this.prompt(prompts).then(function (props) {
@@ -61,13 +52,10 @@ module.exports = class extends Generator {
 
   writing() {
     var files = [
-      { src: 'components/Mediator/NAME.jsonld', dest: 'components/Mediator/' + this.props.componentMediatorName + '.jsonld' },
-      'components/components.jsonld',
-      'components/context.jsonld',
       { src: 'lib/MediatorNAME.ts', dest: 'lib/Mediator' + this.props.componentMediatorName + '.ts' },
       { src: 'test/MediatorNAME-test.ts', dest: 'test/Mediator' + this.props.componentMediatorName + '-test.ts' },
+      'lib/index.ts',
       '.npmignore',
-      'index.ts',
       'package.json',
       'README.md',
     ];

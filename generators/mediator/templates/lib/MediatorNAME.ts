@@ -1,5 +1,4 @@
 import { Actor, IAction, IActorOutput, IActorReply, IActorTest, IMediatorArgs } from '@comunica/core';
-import * as _ from "lodash";
 
 /**
  * <%= description %>

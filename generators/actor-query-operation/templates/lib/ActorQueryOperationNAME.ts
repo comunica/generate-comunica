@@ -1,6 +1,7 @@
 import { ActorQueryOperationTypedMediated, IActorQueryOperationOutput,
   IActorQueryOperationTypedMediatedArgs } from '@comunica/bus-query-operation';
-import { ActionContext, IActorTest } from '@comunica/core';
+import { IActorTest } from '@comunica/core';
+import type { IActionContext } from '@comunica/types';
 import { Algebra } from 'sparqlalgebrajs';
 
 /**
@@ -11,14 +12,14 @@ export class ActorQueryOperation<%= componentActorName %> extends ActorQueryOper
     super(args, '<%= operationName %>');
   }
 
-  public async testOperation(pattern: Algebra.<%= operationInterfaceType %>, context: ActionContext): Promise<IActorTest> {
+  public async testOperation(pattern: Algebra.<%= operationInterfaceType %>, context: IActionContext): Promise<IActorTest> {
     return true; // TODO implement
   }
 
-  public async runOperation(pattern: Algebra.<%= operationInterfaceType %>, context: ActionContext):
+  public async runOperation(pattern: Algebra.<%= operationInterfaceType %>, context: IActionContext):
   Promise<IActorQueryOperationOutput> {
     // Call other query operations like this:
-    // const output: IActorQueryOperationOutput = await this.mediatorQueryOperation.mediate({ operation, context });
-    return { bindingsStream, metadata, variables, canContainUndefs }; // TODO: implement
+    // const output: IQueryOperationResult = await this.mediatorQueryOperation.mediate({ operation, context });
+    return { type: 'bindings', bindingsStream, metadata }; // TODO: implement
   }
 }

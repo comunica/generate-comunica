@@ -2,7 +2,7 @@ import { Actor, Bus, IAction, IActorOutput, IActorTest, Mediator } from '@comuni
 import { Mediator<%= componentMediatorName %> } from '../lib/Mediator<%= componentMediatorName %>';
 
 describe('Mediator<%= componentMediatorName %>', () => {
-  let bus: any;
+  let bus: Bus<DummyActor, IAction, IDummyTest, IDummyTest>;
 
   beforeEach(() => {
     bus = new Bus({ name: 'bus' });
@@ -31,7 +31,7 @@ class DummyActor extends Actor<IAction, IDummyTest, IDummyTest> {
   public readonly id: number;
 
   public constructor(id: number, bus: Bus<DummyActor, IAction, IDummyTest, IDummyTest>) {
-    super({ name: 'dummy' + id, bus });
+    super({ name: `dummy${id}`, bus });
     this.id = id;
   }
 

@@ -27,9 +27,9 @@ After installing, this package can be added to your engine's configuration as fo
   "actors": [
     ...
     {
-      "@id": "config-sets:sparql-queryoperators.json#my<%= componentActorName %>QueryOperator",
+      "@id": "urn:comunica:default:query-operation/actors#<%= name %>",
       "@type": "ActorQueryOperation<%= componentActorName %>",
-      "cbqo:mediatorQueryOperation": { "@id": "config-sets:sparql-queryoperators.json#mediatorQueryOperation" }
+      "mediatorQueryOperation": { "@id": "config-sets:sparql-queryoperators.json#mediatorQueryOperation" }
     }
   ]
 }
@@ -37,4 +37,6 @@ After installing, this package can be added to your engine's configuration as fo
 
 ### Config Parameters
 
-* `cbqo:mediatorQueryOperation`: A mediator over the [Query Operation bus](https://github.com/comunica/comunica/tree/master/packages/bus-query-operation).
+TODO: fill in parameters (this section can be removed if there are none)
+
+* `mediatorQueryOperation`: A mediator over the [Query Operation bus](https://github.com/comunica/comunica/tree/master/packages/bus-query-operation).

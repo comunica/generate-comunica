@@ -1,4 +1,3 @@
-import { Actor<%= componentBusName %> } from '@comunica/bus-<%= busName %>';
 import { Bus } from '@comunica/core';
 import { Actor<%= componentBusName %><%= componentActorName %> } from '../lib/Actor<%= componentBusName %><%= componentActorName %>';
 

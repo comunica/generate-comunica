@@ -1,4 +1,4 @@
-import { Actor, IAction, IActorArgs, IActorOutput, IActorTest } from '@comunica/core';
+import { Actor, IAction, IActorArgs, IActorOutput, IActorTest, Mediate } from '@comunica/core';
 
 /**
  * <%= descriptionActor %>
@@ -24,3 +24,9 @@ export interface IAction<%= componentBaseName %> extends IAction {
 export interface IActor<%= componentBaseName %>Output extends IActorOutput {
 
 }
+
+export type IActorRdfResolveHypermediaArgs = IActorArgs<
+  IAction<%= componentBaseName %>, IActorTest, IActor<%= componentBaseName %>Output>;
+
+export type MediatorRdfResolveHypermedia = Mediate<
+  IAction<%= componentBaseName %>, IActor<%= componentBaseName %>Output>;

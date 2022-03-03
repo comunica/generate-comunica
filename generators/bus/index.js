@@ -48,15 +48,6 @@ module.exports = class extends Generator {
       default : function(props) {
         return 'A comunica actor for ' + props.name + ' events.';
       }
-    }, {
-      name    : 'prefix',
-      message : 'The component context prefix',
-      default : function(props) {
-        return 'cb' + props.name.split('-').map(function (part) { return part[0] }).join('');
-      },
-      validate: function(input) {
-        return !/\s/g.test(input) && !/\./.test(input) && !/-/.test(input) && !/[A-Z]/.test(input) && input.length > 1;
-      }
     }];
     var self = this;
     return this.prompt(prompts).then(function (props) {
@@ -67,13 +58,9 @@ module.exports = class extends Generator {
 
   writing() {
     var files = [
-      { src: 'components/Actor/NAME.jsonld', dest: 'components/Actor/' + this.props.componentBaseName + '.jsonld' },
-      { src: 'components/Bus/NAME.jsonld', dest: 'components/Bus/' + this.props.componentBaseName + '.jsonld' },
-      'components/components.jsonld',
-      'components/context.jsonld',
       { src: 'lib/ActorNAME.ts', dest: 'lib/Actor' + this.props.componentBaseName + '.ts' },
+      'lib/index.ts',
       '.npmignore',
-      'index.ts',
       'package.json',
       'README.md',
     ];

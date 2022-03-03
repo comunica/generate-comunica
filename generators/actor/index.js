@@ -70,24 +70,6 @@ module.exports = class extends Generator {
       default : function(props) {
         return 'A comunica ' + props.fullName + ' ' + props.fullBusName + ' Actor.';
       }
-    }, {
-      name    : 'prefix',
-      message : 'The component context prefix',
-      default : function(props) {
-        return 'ca' + props.busName.split('-').map(function (part) { return part[0] }).join('') + props.name.split('-').map(function (part) { return part[0] }).join('');
-      },
-      validate: function(input) {
-        return !/\s/g.test(input) && !/\./.test(input) && !/-/.test(input) && !/[A-Z]/.test(input) && input.length > 1;
-      }
-    }, {
-      name    : 'prefixBus',
-      message : 'The component bus context prefix',
-      default : function(props) {
-        return 'cb' + props.busName.split('-').map(function (part) { return part[0] }).join('');
-      },
-      validate: function(input) {
-        return !/\s/g.test(input) && !/\./.test(input) && !/-/.test(input) && !/[A-Z]/.test(input) && input.length > 1;
-      }
     }];
     var self = this;
     return this.prompt(prompts).then(function (props) {
@@ -98,13 +80,10 @@ module.exports = class extends Generator {
 
   writing() {
     var files = [
-      { src: 'components/Actor/BUS/NAME.jsonld', dest: 'components/Actor/' + this.props.componentBusName + '/' + this.props.componentActorName + '.jsonld' },
-      'components/components.jsonld',
-      'components/context.jsonld',
       { src: 'lib/ActorBUSNAME.ts', dest: 'lib/Actor' + this.props.componentBusName + this.props.componentActorName + '.ts' },
       { src: 'test/ActorBUSNAME-test.ts', dest: 'test/Actor' + this.props.componentBusName + this.props.componentActorName + '-test.ts' },
+      'lib/index.ts',
       '.npmignore',
-      'index.ts',
       'package.json',
       'README.md',
     ];

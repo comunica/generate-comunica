@@ -61,15 +61,6 @@ module.exports = class extends Generator {
       default : function(props) {
         return 'A [Query Operation](https://github.com/comunica/comunica/tree/master/packages/bus-query-operation) actor that handles SPARQL ' + props.name + ' operations.';
       }
-    }, {
-      name    : 'prefix',
-      message : 'The component context prefix',
-      default : function(props) {
-        return 'caqo' + props.name.split('-').map(function (part) { return part[0] }).join('');
-      },
-      validate: function(input) {
-        return !/\s/g.test(input) && !/\./.test(input) && !/-/.test(input) && !/[A-Z]/.test(input) && input.length > 1;
-      }
     }];
     var self = this;
     return this.prompt(prompts).then(function (props) {
@@ -80,13 +71,10 @@ module.exports = class extends Generator {
 
   writing() {
     var files = [
-      { src: 'components/Actor/QueryOperation/NAME.jsonld', dest: 'components/Actor/QueryOperation/' + this.props.componentActorName + '.jsonld' },
-      'components/components.jsonld',
-      'components/context.jsonld',
       { src: 'lib/ActorQueryOperationNAME.ts', dest: 'lib/ActorQueryOperation' + this.props.componentActorName + '.ts' },
       { src: 'test/ActorQueryOperationNAME-test.ts', dest: 'test/ActorQueryOperation' + this.props.componentActorName + '-test.ts' },
+      'lib/index.ts',
       '.npmignore',
-      'index.ts',
       'package.json',
       'README.md',
     ];

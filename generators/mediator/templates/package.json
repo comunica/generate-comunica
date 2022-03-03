@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "A <%= name %> mediator",
   "lsd:module": true,
-  "main": "index.js",
-  "typings": "index",
+  "main": "lib/index.js",
+  "typings": "lib/index",
   "repository": {
     "type": "git",
     "url": "https://github.com/comunica/comunica.git",
@@ -25,39 +25,14 @@
   "files": [
     "components",
     "lib/**/*.d.ts",
-    "lib/**/*.js",
-    "index.d.ts",
-    "index.js"
+    "lib/**/*.js"
   ],
   "dependencies": {
-    "lodash": "^4.17.4"
-  },
-  "peerDependencies": {
     "@comunica/core": "^<%= versionComunicaCore %>"
-  },
-  "devDependencies": {
-    "@comunica/core": "^<%= versionComunicaCore %>"
-  },
-  "jest": {
-    "globals": {
-      "ts-jest": {
-        "tsConfig": "../../tsconfig.json"
-      }
-    },
-    "transform": {
-      "^.+\\.ts$": "ts-jest"
-    },
-    "testRegex": "(/test/.*|(\\.|/)(test|spec))\\.ts$",
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ],
-    "collectCoverage": true
   },
   "scripts": {
-    "test": "node \"../../node_modules/jest/bin/jest.js\" ${1}",
-    "test-watch": "node \"../../node_modules/jest/bin/jest.js\" ${1} --watch",
-    "build": "node \"../../node_modules/typescript/bin/tsc\"",
-    "validate": "npm ls"
+    "build": "npm run build:ts && npm run build:components",
+    "build:ts": "node \"../../node_modules/typescript/bin/tsc\"",
+    "build:components": "componentsjs-generator"
   }
 }
