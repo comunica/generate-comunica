@@ -25,8 +25,8 @@ export interface IActor<%= componentBaseName %>Output extends IActorOutput {
 
 }
 
-export type IActorRdfResolveHypermediaArgs = IActorArgs<
+export type IActor<%= componentBaseName %>Args = IActorArgs<
   IAction<%= componentBaseName %>, IActorTest, IActor<%= componentBaseName %>Output>;
 
-export type MediatorRdfResolveHypermedia = Mediate<
+export type Mediator<%= componentBaseName %> = Mediate<
   IAction<%= componentBaseName %>, IActor<%= componentBaseName %>Output>;
