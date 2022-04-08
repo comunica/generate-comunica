@@ -1,11 +1,11 @@
-import { Actor<%= componentBusName %>, IAction<%= componentBusName %>, IActor<%= componentBusName %>Output } from '@comunica/bus-<%= busName %>';
+import { Actor<%= componentBusName %>, IAction<%= componentBusName %>, IActor<%= componentBusName %>Output, IActor<%= componentBusName %>Args } from '@comunica/bus-<%= busName %>';
 import { IActorArgs, IActorTest } from '@comunica/core';
 
 /**
  * <%= description %>
  */
 export class Actor<%= componentBusName %><%= componentActorName %> extends Actor<%= componentBusName %> {
-  public constructor(args: IActorArgs<IAction<%= componentBusName %>, IActorTest, IActor<%= componentBusName %>Output>) {
+  public constructor(args: IActor<%= componentBusName %>Args) {
     super(args);
   }
 
