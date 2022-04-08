@@ -12,7 +12,7 @@ import { Actor, IAction, IActorArgs, IActorOutput, IActorTest, Mediate } from '@
  * @see IActor<%= componentBaseName %>Output
  */
 export abstract class Actor<%= componentBaseName %> extends Actor<IAction<%= componentBaseName %>, IActorTest, IActor<%= componentBaseName %>Output> {
-  public constructor(args: IActorArgs<IAction<%= componentBaseName %>, IActorTest, IActor<%= componentBaseName %>Output>) {
+  public constructor(args: IActor<%= componentBaseName %>Args) {
     super(args);
   }
 }
