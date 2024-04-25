@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Generators for Comunica modules",
   "main": "index.js",
+  "packageManager": "yarn@1.22.22",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
