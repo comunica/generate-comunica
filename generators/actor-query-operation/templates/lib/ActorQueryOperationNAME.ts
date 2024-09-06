@@ -1,6 +1,6 @@
 import { ActorQueryOperationTypedMediated, IActorQueryOperationOutput,
   IActorQueryOperationTypedMediatedArgs } from '@comunica/bus-query-operation';
-import { IActorTest } from '@comunica/core';
+import { TestResult, IActorTest } from '@comunica/core';
 import type { IActionContext } from '@comunica/types';
 import { Algebra } from 'sparqlalgebrajs';
 
@@ -12,7 +12,7 @@ export class ActorQueryOperation<%= componentActorName %> extends ActorQueryOper
     super(args, '<%= operationName %>');
   }
 
-  public async testOperation(pattern: Algebra.<%= operationInterfaceType %>, context: IActionContext): Promise<IActorTest> {
+  public async testOperation(pattern: Algebra.<%= operationInterfaceType %>, context: IActionContext): Promise<TestResult<IActorTest>> {
     return true; // TODO implement
   }
 
