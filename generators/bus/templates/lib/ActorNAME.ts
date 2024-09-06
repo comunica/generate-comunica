@@ -13,7 +13,9 @@ import { Actor, IAction, IActorArgs, IActorOutput, IActorTest, Mediate } from '@
  */
 export abstract class Actor<%= componentBaseName %> extends Actor<IAction<%= componentBaseName %>, IActorTest, IActor<%= componentBaseName %>Output> {
   /**
-  * @param args - @defaultNested {<default_bus> a <cc:components/Bus.jsonld#Bus>} bus
+  * @param args -
+   *   \ @defaultNested {<default_bus> a <cc:components/Bus.jsonld#Bus>} bus
+   *   \ @defaultNested {TODO failed: none of the configured actors were to TODO} busFailMessage
   */
   public constructor(args: IActor<%= componentBaseName %>Args) {
     super(args);
