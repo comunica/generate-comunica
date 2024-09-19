@@ -11,13 +11,13 @@ import { Actor, IAction, IActorArgs, IActorOutput, IActorTest, Mediate } from '@
  * @see IAction<%= componentBaseName %>
  * @see IActor<%= componentBaseName %>Output
  */
-export abstract class Actor<%= componentBaseName %> extends Actor<IAction<%= componentBaseName %>, IActorTest, IActor<%= componentBaseName %>Output> {
+export abstract class Actor<%= componentBaseName %><TS = undefined> extends Actor<IAction<%= componentBaseName %>, IActorTest, IActor<%= componentBaseName %>Output, TS> {
   /**
   * @param args -
    *   \ @defaultNested {<default_bus> a <cc:components/Bus.jsonld#Bus>} bus
    *   \ @defaultNested {TODO failed: none of the configured actors were to TODO} busFailMessage
   */
-  public constructor(args: IActor<%= componentBaseName %>Args) {
+  public constructor(args: IActor<%= componentBaseName %>Args<TS>) {
     super(args);
   }
 }
@@ -30,8 +30,8 @@ export interface IActor<%= componentBaseName %>Output extends IActorOutput {
 
 }
 
-export type IActor<%= componentBaseName %>Args = IActorArgs<
-IAction<%= componentBaseName %>, IActorTest, IActor<%= componentBaseName %>Output>;
+export type IActor<%= componentBaseName %>Args<TS> = IActorArgs<
+IAction<%= componentBaseName %>, IActorTest, IActor<%= componentBaseName %>Output, TS>;
 
 export type Mediator<%= componentBaseName %> = Mediate<
 IAction<%= componentBaseName %>, IActor<%= componentBaseName %>Output>;
