@@ -18,6 +18,10 @@
     "runner"
   ],
   "license": "MIT",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/comunica-association"
+  },
   "bugs": {
     "url": "https://github.com/comunica/comunica/issues"
   },
