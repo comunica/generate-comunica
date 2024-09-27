@@ -74,7 +74,6 @@ module.exports = class extends Generator {
       { src: 'lib/ActorQueryOperationNAME.ts', dest: 'lib/ActorQueryOperation' + this.props.componentActorName + '.ts' },
       { src: 'test/ActorQueryOperationNAME-test.ts', dest: 'test/ActorQueryOperation' + this.props.componentActorName + '-test.ts' },
       'lib/index.ts',
-      '.npmignore',
       'package.json',
       'README.md',
     ];

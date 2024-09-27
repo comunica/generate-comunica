@@ -83,7 +83,6 @@ module.exports = class extends Generator {
       { src: 'lib/ActorBUSNAME.ts', dest: 'lib/Actor' + this.props.componentBusName + this.props.componentActorName + '.ts' },
       { src: 'test/ActorBUSNAME-test.ts', dest: 'test/Actor' + this.props.componentBusName + this.props.componentActorName + '-test.ts' },
       'lib/index.ts',
-      '.npmignore',
       'package.json',
       'README.md',
     ];

@@ -60,7 +60,6 @@ module.exports = class extends Generator {
     var files = [
       { src: 'lib/ActorNAME.ts', dest: 'lib/Actor' + this.props.componentBaseName + '.ts' },
       'lib/index.ts',
-      '.npmignore',
       'package.json',
       'README.md',
     ];

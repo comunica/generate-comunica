@@ -55,7 +55,6 @@ module.exports = class extends Generator {
       { src: 'lib/MediatorNAME.ts', dest: 'lib/Mediator' + this.props.componentMediatorName + '.ts' },
       { src: 'test/MediatorNAME-test.ts', dest: 'test/Mediator' + this.props.componentMediatorName + '-test.ts' },
       'lib/index.ts',
-      '.npmignore',
       'package.json',
       'README.md',
     ];
