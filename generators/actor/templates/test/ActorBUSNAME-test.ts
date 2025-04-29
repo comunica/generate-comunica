@@ -1,5 +1,6 @@
 import { Bus } from '@comunica/core';
 import { Actor<%= componentBusName %><%= componentActorName %> } from '../lib/Actor<%= componentBusName %><%= componentActorName %>';
+import '@comunica/utils-jest';
 
 describe('Actor<%= componentBusName %><%= componentActorName %>', () => {
   let bus: any;
@@ -16,7 +17,7 @@ describe('Actor<%= componentBusName %><%= componentActorName %>', () => {
     });
 
     it('should test', () => {
-      return expect(actor.test({ todo: true })).resolves.toEqual({ todo: true }); // TODO
+      return expect(actor.test({ todo: true })).resolves.toPassTestVoid(); // TODO
     });
 
     it('should run', () => {
