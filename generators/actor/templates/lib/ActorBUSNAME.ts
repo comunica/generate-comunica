@@ -1,5 +1,5 @@
 import { Actor<%= componentBusName %>, IAction<%= componentBusName %>, IActor<%= componentBusName %>Output, IActor<%= componentBusName %>Args } from '@comunica/bus-<%= busName %>';
-import { TestResult, IActorArgs, IActorTest } from '@comunica/core';
+import { TestResult, IActorTest, passTestVoid } from '@comunica/core';
 
 /**
  * <%= description %>
@@ -10,7 +10,7 @@ export class Actor<%= componentBusName %><%= componentActorName %> extends Actor
   }
 
   public async test(action: IAction<%= componentBusName %>): Promise<TestResult<IActorTest>> {
-    return true; // TODO implement
+    return passTestVoid(); // TODO implement
   }
 
   public async run(action: IAction<%= componentBusName %>): Promise<IActor<%= componentBusName %>Output> {
