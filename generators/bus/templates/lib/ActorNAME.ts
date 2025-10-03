@@ -30,7 +30,7 @@ export interface IActor<%= componentBaseName %>Output extends IActorOutput {
 
 }
 
-export type IActor<%= componentBaseName %>Args<TS> = IActorArgs<
+export type IActor<%= componentBaseName %>Args<TS = undefined> = IActorArgs<
 IAction<%= componentBaseName %>, IActorTest, IActor<%= componentBaseName %>Output, TS>;
 
 export type Mediator<%= componentBaseName %> = Mediate<
