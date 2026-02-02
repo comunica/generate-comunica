@@ -37,7 +37,8 @@
   ],
   "dependencies": {
     "@comunica/core": "^<%= versionComunicaCore %>",
-    "@comunica/bus-query-operation": "^<%= versionBus %>"
+    "@comunica/bus-query-operation": "^<%= versionBus %>",
+    "@comunica/utils-algebra": "^<%= versionBus %>"
   },
   "scripts": {
     "build": "yarn run build:ts && yarn run build:components",
